@@ -1,39 +1,39 @@
-type remoteData('e, 'a) =
+type t('e, 'a) =
   | NotAsked
   | Loading
   | Failure('e)
   | Success('a);
 
-let map: ('a => 'b, remoteData('e, 'a)) => remoteData('e, 'b);
+let map: ('a => 'b, t('e, 'a)) => t('e, 'b);
 
-let map2: (('a, 'b) => 'c, remoteData('e, 'a), remoteData('e, 'b)) => remoteData('e, 'c);
+let map2: (('a, 'b) => 'c, t('e, 'a), t('e, 'b)) => t('e, 'c);
 
 let map3:
-  (('a, 'b, 'c) => 'd, remoteData('e, 'a), remoteData('e, 'b), remoteData('e, 'c)) =>
-  remoteData('e, 'd);
+  (('a, 'b, 'c) => 'd, t('e, 'a), t('e, 'b), t('e, 'c)) =>
+  t('e, 'd);
 
-let mapError: ('e => 'f, remoteData('e, 'a)) => remoteData('f, 'a);
+let mapError: ('e => 'f, t('e, 'a)) => t('f, 'a);
 
-let mapBoth: ('a => 'b, 'e => 'f, remoteData('e, 'a)) => remoteData('f, 'b);
+let mapBoth: ('a => 'b, 'e => 'f, t('e, 'a)) => t('f, 'b);
 
-let andThen: ('a => remoteData('e, 'b), remoteData('e, 'a)) => remoteData('e, 'b);
+let andThen: ('a => t('e, 'b), t('e, 'a)) => t('e, 'b);
 
-let withDefault: ('a, remoteData('e, 'a)) => 'a;
+let withDefault: ('a, t('e, 'a)) => 'a;
 
-let toOption: remoteData('e, 'a) => option('a);
+let toOption: t('e, 'a) => option('a);
 
-let fromOption: (option('a), 'e) => remoteData('e, 'a);
+let fromOption: (option('a), 'e) => t('e, 'a);
 
-let append: (remoteData('e, 'a), remoteData('e, 'b)) => remoteData('e, ('a, 'b));
+let append: (t('e, 'a), t('e, 'b)) => t('e, ('a, 'b));
 
-let andMap: (remoteData('e, 'a), remoteData('e, 'a => 'b)) => remoteData('e, 'b);
+let andMap: (t('e, 'a), t('e, 'a => 'b)) => t('e, 'b);
 
-let succeed: 'a => remoteData('e, 'a);
+let succeed: 'a => t('e, 'a);
 
-let isSuccess: remoteData('e, 'a) => bool;
+let isSuccess: t('e, 'a) => bool;
 
-let isFailure: remoteData('e, 'a) => bool;
+let isFailure: t('e, 'a) => bool;
 
-let isLoading: remoteData('e, 'a) => bool;
+let isLoading: t('e, 'a) => bool;
 
-let isNotAsked: remoteData('e, 'a) => bool;
+let isNotAsked: t('e, 'a) => bool;

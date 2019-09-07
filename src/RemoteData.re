@@ -4,7 +4,7 @@
   See also https://github.com/krisajenkins/remotedata
   Tools for fetching data from remote sources (incl. HTTP).
  */
-type remoteData('e, 'a) =
+type t('e, 'a) =
   | NotAsked
   | Loading
   | Failure('e)

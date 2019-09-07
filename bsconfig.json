@@ -3,7 +3,7 @@
   "reason": {
     "react-jsx": 3
   },
-  "namespace":true,
+  // "namespace":true,
   "bsc-flags": ["-bs-super-errors"],
   "refmt": 3,
   "bs-dev-dependencies": ["@glennsl/bs-jest"],
