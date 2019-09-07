@@ -1,0 +1,36 @@
+{
+  "name": "@idkjs/reason-remote-data",
+  "version": "1.0.0",
+  "description": "Tools for fetching data from remote sources (incl. HTTP)",
+  "license": "MIT",
+  "main": "lib/js/src/remotedata.js",
+  "author": "Alain Armand <aarmand.inbox@gmail.com>",
+  "repository": "git@github.com:idkjs/reason-remote-data.git",
+  "bugs": {
+    "url": "https://github.com/idkjs/reason-remote-data/issues"
+  },
+  "homepage": "https://github.com/idkjs/reason-remote-data#readme",
+  "scripts": {
+    "build": "bsb -make-world -clean-world",
+    "setup": "bsb -make-world",
+    "test": "npm run build",
+    "watch": "bsb -make-world -w",
+    "dev-reason": "bsb -make-world -w",
+    "dev-webpack": "webpack -w",
+    "dev-server": "webpack-dev-server",
+    "dev": "concurrently \"npm:dev-*\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" -l \"command\""
+  },
+  "keywords": [
+    "ReasonML",
+    "http",
+    "data-fetching"
+  ],
+  "peerDependencies": {
+    "bs-platform": "5.0.6"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "0.4.9",
+    "bs-platform": "5.0.6",
+    "concurrently": "^4.0.1"
+  }
+}

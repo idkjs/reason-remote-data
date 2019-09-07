@@ -1,0 +1,23 @@
+# mac
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Reason
+.merlin
+.bsb.lock
+/lib/bs/
+*.bs.js
+
+# Runtime data
+tmp
+build
+dist
+
+# Dependency directory
+node_modules
