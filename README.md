@@ -5,6 +5,8 @@ It's just trying to go through the steps of releasing a library.
 
 Use this if you actual need `remotedata`: [remotedata-re](https://github.com/lrosa007/remotedata-re)
 
+Good reads: [publish-to-npm](https://zellwk.com/blog/publish-to-npm/), [How to publish a React Native component to NPM](https://www.freecodecamp.org/news/how-to-publish-a-react-native-component-to-npm-its-easier-than-you-think-51f6ae1ef850/)
+
 ## Setup
 
 Install the module:
