@@ -12,14 +12,14 @@ Good reads: [publish-to-npm](https://zellwk.com/blog/publish-to-npm/), [How to p
 Install the module:
 
 ```bash
-yarn add @aa/reason-remote-data
+yarn add @idkjs/reason-remote-data
 ```
 
 Then add it to your `bsconfig.json`:
 
 ```json
 {
-  "bs-dependencies": ["reason-react", "@aa/reason-remote-data"]
+  "bs-dependencies": ["reason-react", "@idkjs/reason-remote-data"]
 }
 ```
 
@@ -29,7 +29,7 @@ Then add it to your `bsconfig.json`:
 npm publish
 ```
 
-You will have to work your way through the `npm publish` failures to get it to go. At first, I named the project `@aa/reason-remote-data` which wasnt accepted. I guess it already in use or reserved on `npm`. After the change it worked.
+You will have to work your way through the `npm publish` failures to get it to go. At first, I named the project `@idkjs/reason-remote-data` which wasnt accepted. I guess it already in use or reserved on `npm`. After the change it worked.
 
 ## Usage
 
